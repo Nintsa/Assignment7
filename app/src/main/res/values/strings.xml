@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Assignment7</string>
+    <string name="ninca_kemularia">Ninca Kemularia</string>
+    <string name="inputText">enter text or number</string>
+    <string name="checkText">Check if you want input to be Numeric</string>
+    <string name="text_btn">Add New EditText</string>
+</resources>
