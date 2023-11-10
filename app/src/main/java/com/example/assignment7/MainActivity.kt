@@ -10,7 +10,6 @@ import com.example.assignment7.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var inputText: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,11 +18,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btn.setOnClickListener {
-            inputText = binding.inputText.toString()
             val hintText = EditText(this)
             hintText.hint = if (binding.checkbox.isChecked) {
                 "Enter Number"
-            } else "Enter Whatever you want"
+            } else binding.inputText.text
             hintText.inputType = if (binding.checkbox.isChecked) {
                 InputType.TYPE_CLASS_NUMBER
             } else InputType.TYPE_CLASS_TEXT
